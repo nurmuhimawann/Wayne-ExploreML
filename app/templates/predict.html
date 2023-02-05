@@ -1,0 +1,60 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Wayne - Explore ML{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid row justify-content-center mt-5" id="recommendation">
+        <div class="col-md-12 text-center">
+            <h3>Predict Red Wine Quality</h3>
+        </div>
+        <div class="col-md-8">
+            <div class="card mt-5 mb-5">
+                <div class="card-body">
+                    <h5>Komposisi Red Wine Anda</h5>
+                    <p class="pb-3">Masukkan data yang dibutuhkan terkait komposisi red wine Anda pada form dibawah
+                        ini</p>
+                    <form action="{{ url_for('result_predict') }}" method="POST">
+                        <div class="mb-4">
+                            <label for="VolatileAcidity" class="form-label">Volatile Acidity (VA)</label>
+                            <input type="text" class="form-control" id="VolatileAcidity" name="VolatileAcidity">
+                            <div id="VolatileAcidityHelp" class="form-text">jumlah kandungan asam asetat di dalam
+                                wine</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="CitricAcid" class="form-label">Citric Acid (Asam Sitrat)</label>
+                            <input type="text" class="form-control" id="CitricAcid" name="CitricAcid">
+                            <div id="CitricAcidHelp" class="form-text">jumlah kandungan asam sitrat di dalam wine
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Chlorides" class="form-label">Chlorides (Klorida)</label>
+                            <input type="text" class="form-control" id="Chlorides" name="Chlorides">
+                            <div id="ChloridesHelp" class="form-text">jumlah kandungan garam di dalam wine</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="TotalSulfurDioxide" class="form-label">Total Sulfur Dioxide (TSO2)</label>
+                            <input type="text" class="form-control" id="TotalSulfurDioxide"
+                                name="TotalSulfurDioxide">
+                            <div id="TotalSulfurDioxideHelp" class="form-text">jumlah kandungan SO2 (baik bebas
+                                maupun terikat) di dalam wine</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Sulphates" class="form-label">Sulphates (Sulfat)</label>
+                            <input type="text" class="form-control" id="Sulphates" name="Sulphates">
+                            <div id="SulphatesHelp" class="form-text">jumlah kandungan sulfat di dalam wine</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Alcohol" class="form-label">Alcohol</label>
+                            <input type="text" class="form-control" id="Alcohol" name="Alcohol">
+                            <div id="AlcoholHelp" class="form-text">jumlah kandungan alcohol di dalam wine</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">prediksi wine-mu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+<body>
