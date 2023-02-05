@@ -1,0 +1,83 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar>.container-fluid {
+    margin: auto 40px;
+}
+
+.navbar-nav>.nav-item {
+    margin: auto 10px;
+}
+
+.navbar-nav>.nav-item>a {
+    color: #000000;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.navbar-nav>.nav-item>a>span {
+    margin: auto 8px;
+}
+
+.navbar-nav>.nav-item>a:hover span {
+    text-decoration: underline;
+    color: rgb(255, 124, 0);
+}
+
+.navbar-nav>.nav-item:last-child .nav-link>img {
+    margin-top: -5px;
+}
+
+.jumbotron {
+    margin: 32px auto 48px;
+}
+
+.jumbotron .text-head {
+    padding-left: 2rem;
+}
+
+.jumbotron h1 {
+    margin: 4rem 0 2rem -11rem;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    color: #111827;
+}
+
+.jumbotron p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4B5563;
+}
+
+.jumbotron .btn {
+    background-image: linear-gradient(to right bottom, rgb(255, 124, 0), rgb(255, 124, 0), rgb(234, 179, 8));
+    --bs-btn-border-color: linear-gradient(to right bottom, rgb(255, 124, 0), rgb(255, 124, 0), rgb(234, 179, 8));
+    width: 145px;
+    height: 52px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 38px;
+    border-radius: 9999px;
+    
+}
+
+.jumbotron .btn:hover {
+    background-image: linear-gradient(to right bottom, rgb(255, 124, 0), rgb(255, 124, 0), rgb(255, 191, 0));
+    text-decoration: underline;
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    display: flex;
+}
+
+#recommendation a {
+    border-radius: 50px;
+    padding: 10px 25px;
+    width: 100%;
+}
