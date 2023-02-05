@@ -6,10 +6,7 @@ import numpy as np
 from flask import redirect, render_template, url_for, request, json
 from app import app
 
-# Load fresh rotten model
-# fresh_rotten_model = load_model('app/models/model_dir/model.h5')
-
-# app.config['UPLOAD FOLDER'] = 'static/'
+# app.config
 rf_model = pickle.load(open('app/models/model.pkl', 'rb'))
 
 # Render landing page
