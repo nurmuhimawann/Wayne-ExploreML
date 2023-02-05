@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="dicoding:email" content="muhammad.himawan73@gmail.com">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Favicons -->
+    {% include 'includes/favicons.html' %}
+
+    {% include 'includes/stylesheet.html' %}
+</head>
+<body>
+    <!-- Navbar Section Start -->
+    {% include 'includes/navbar.html' %}
+    <!-- Navbar Section End -->
+
+    <!-- Content Section Start -->
+    {% block content %}{% endblock %}
+    <!-- Content Section End -->
+
+    <!-- Footer Section Start -->
+    {% include 'includes/footer.html' %}
+    <!-- Footer Section End -->
+
+    <!-- Javacript Library -->
+    {% include 'includes/scripts.html' %}
+</body>
+</html>

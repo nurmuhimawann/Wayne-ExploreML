@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Wayne - Explore ML{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container mt-5">
+        <div class="row justify-content-center" id="recommendation">
+            <div class="col-md-12 text-center">
+                <h3>Predict Red Wine Quality</h3>
+            </div>
+            <div class="col-md-8">
+                <div class="card mt-5 mb-5">
+                    <div class="card-body">
+                        <h5 class="text-center mb-4">Hasil Prediksi</h5>
+                        <!-- <img id="image"> -->
+                        <img src="{{ url_img }}"
+                            class="rounded mx-auto d-block mt-4 mb-4" alt="">
+                        <p class="text-center">Kualitas red wine Anda adalah <span class="fw-bold"
+                                id="result">"{{ result }}"</span></p>
+
+                        <a href="{{ url_for('predict') }}" class="btn btn-primary mt-3">Kembali</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+<body>
